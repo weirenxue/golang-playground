@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("http://localhost:8080/get", {"method": "GET", headers: new Headers({
+            "authorization": 'Bearer token'
+        })})
+            .then(response => response.json())
+            .then(data => console.log(`GET success`))
+            .catch(() => console.log(`GET failed due to cors policy`))
+            
+        fetch("http://localhost:8080/post", {"method": "POST", headers: new Headers({
+            "authorization": 'Bearer token'
+        })})
+            .then(response => response.json())
+            .then(data => console.log(`POST success`))
+            .catch(() => console.log(`POST failed due to cors policy`))
+
+        fetch("http://localhost:8080/put", {"method": "PUT", headers: new Headers({
+            "authorization": 'Bearer token'
+        })})
+            .then(response => response.json())
+            .then(data => console.log(`PUT success`))
+            .catch(() => console.log(`PUT failed due to cors policy`))
+
+        fetch("http://localhost:8080/patch", {"method": "PATCH", headers: new Headers({
+            "authorization": 'Bearer token'
+        })})
+            .then(response => response.json())
+            .then(data => console.log(`PATCH success`))
+            .catch(() => console.log(`PATCH failed due to cors policy`))
+
+        fetch("http://localhost:8080/delete", {"method": "DELETE", headers: new Headers({
+            "authorization": 'Bearer token'
+        })})
+            .then(response => response.json())
+            .then(data => console.log(`DELETE success`))
+            .catch(() => console.log(`DELETE failed due to cors policy`))
+    </script>
+</body>
+</html>
