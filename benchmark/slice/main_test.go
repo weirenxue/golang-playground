@@ -29,3 +29,15 @@ func BenchmarkSetSlice05(b *testing.B) {
 		SetSlice05(10000)
 	}
 }
+
+func BenchmarkInitSlice01(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		InitSlice01(10000)
+	}
+}
+
+func BenchmarkInitSlice02(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		InitSlice02(10000)
+	}
+}

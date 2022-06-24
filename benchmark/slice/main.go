@@ -54,3 +54,17 @@ func SetSlice05(n int) {
 		}
 	}
 }
+
+// declare a variable by assigning type
+func InitSlice01(n int) {
+	for i := 0; i < n; i++ {
+		var _ []Dummy
+	}
+}
+
+// declare a variable by type inference
+func InitSlice02(n int) {
+	for i := 0; i < n; i++ {
+		_ = []Dummy{}
+	}
+}
