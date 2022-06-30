@@ -1,4 +1,4 @@
 
 .PHONY: build
 build:
-	go build ./cmd/app/app.go
+	go build ./app.go
