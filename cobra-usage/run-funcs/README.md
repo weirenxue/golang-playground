@@ -1,6 +1,6 @@
 # RUN Functions Execution Bahavior
 
-This project attempts to understand the behavior of cobra as it executes many RUN funcions
+This project attempts to understand the behavior of cobra as it executes many RUN funcions.
 
 ## What is the order of these RUN functions?
 
