@@ -2,20 +2,38 @@ package main
 
 import "testing"
 
-func BenchmarkUnmarshallWithoutRawMessage(b *testing.B) {
+func BenchmarkUnmarshal01(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		UnmarshallWithoutRawMessage(10000)
+		Unmarshal01(100)
 	}
 }
 
-func BenchmarkUnmarshallWithRawMessage01(b *testing.B) {
+func BenchmarkUnmarshal02(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		UnmarshallWithRawMessage01(10000)
+		Unmarshal02(100)
 	}
 }
 
-func BenchmarkUnmarshallWithRawMessage02(b *testing.B) {
+func BenchmarkUnmarshal03(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		UnmarshallWithRawMessage02(10000)
+		Unmarshal03(100)
+	}
+}
+
+func BenchmarkUnmarshal04(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Unmarshal04(100)
+	}
+}
+
+func BenchmarkUnmarshal05(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Unmarshal05(100)
+	}
+}
+
+func BenchmarkUnmarshal06(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Unmarshal06(100)
 	}
 }
