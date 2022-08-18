@@ -1,0 +1,18 @@
+[mq]
+url = "amqp://guest:guest@localhost:5672"
+exchange_name = "api-test"
+exchange_type = "topic" # if changed, need to delete the old exchange first
+
+[subscribers]
+connections = 1
+channels_per_connection = 1
+queues_per_channel = 5
+prefetch_count = 100
+routing_key = "for.topic.routing.key.*.end"
+auto_ack = true
+queue_name_prefix = "for_test"
+
+[publisher]
+routing_key = "for.topic.routing.key.this-is-some-topic.end"
+data_size = 120_000 # bytes
+packages_per_second = 4000
