@@ -28,7 +28,7 @@ If your need to modify RabbitMQ connection configuration, the `mq` block in `con
 
 ## How to run?
 
-There is no order to run "subscribers" and "publishers".
+There is no order to run `subscribers` and `publisher`.
 
 Run the `subscribers`
 
